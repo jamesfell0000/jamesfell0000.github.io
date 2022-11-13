@@ -20,10 +20,12 @@ div{
  
 #header{
     background: #808080;
+    font-family: 'Roboto', sans-serif;
 }
  
 #main{
-    background: #ffffff;    
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* =Structures
