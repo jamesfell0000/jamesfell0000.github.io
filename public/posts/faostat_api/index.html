@@ -6,7 +6,7 @@
     
     <title>FAOSTAT API in R | code</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Introduction To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website.">
+    <meta name="description" content="To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website.">
     <meta name="generator" content="Hugo 0.119.0">
     
     
@@ -30,18 +30,18 @@
     
     
     <meta property="og:title" content="FAOSTAT API in R" />
-<meta property="og:description" content="Introduction To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website." />
+<meta property="og:description" content="To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jamesfell.github.io/posts/faostat_api/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-10-29T20:50:58+11:00" />
 <meta property="article:modified_time" content="2023-10-29T20:50:58+11:00" />
 <meta itemprop="name" content="FAOSTAT API in R">
-<meta itemprop="description" content="Introduction To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website."><meta itemprop="datePublished" content="2023-10-29T20:50:58+11:00" />
+<meta itemprop="description" content="To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website."><meta itemprop="datePublished" content="2023-10-29T20:50:58+11:00" />
 <meta itemprop="dateModified" content="2023-10-29T20:50:58+11:00" />
-<meta itemprop="wordCount" content="190">
+<meta itemprop="wordCount" content="300">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="FAOSTAT API in R"/>
-<meta name="twitter:description" content="Introduction To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website."/>
+<meta name="twitter:description" content="To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website."/>
 
 	
   </head>
@@ -114,16 +114,52 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="introduction">Introduction</h2>
-<p>To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>To help improve actual evidence bases, here&rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website.</p>
 <p>First, installation (you need to have already installed the packages jsonlite, readr and httr):</p>
-<p>Visit the <a href="https://gohugo.io">Hugo</a> website!</p>
-<p>Next, load the functions:</p>
-<p>And that&rsquo;s pretty much it. But you need to know how to get the database names, area codes, element codes and item codes. You can get these from FAOSTAT here, and also if you manually do a FAOSTAT query, they come up in the table on the web.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;jsonlite&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;readr&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;httr&#34;</span>)
+</span></span></code></pre></div><p>Next, load the functions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>get_fao <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(database_name,areas,elements,items,years) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">library</span>(jsonlite)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">library</span>(readr)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">library</span>(httr)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">length</span>(areas)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>) {areas <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste0</span>(areas, collapse<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%2C&#39;</span>)}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">length</span>(elements)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>) {elements <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste0</span>(elements, collape<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%2C&#39;</span>)}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">length</span>(items)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>) {items <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste0</span>(items, collape<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%2C&#39;</span>)}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">length</span>(years)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>) {years <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste0</span>(years, collapse<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;%2C&#34;</span>)}
+</span></span><span style="display:flex;"><span>	url <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste0</span>(<span style="color:#e6db74">&#34;http://fenixservices.fao.org/faostat/api/v1/en/data/&#34;</span>,database_name,<span style="color:#e6db74">&#34;?area=&#34;</span>,areas,<span style="color:#e6db74">&#34;&amp;area_cs=ISO3&amp;element=&#34;</span>,elements,<span style="color:#e6db74">&#34;&amp;element_cs=FAO&amp;item=&#34;</span>,items,<span style="color:#e6db74">&#34;&amp;item_cs=FAO&amp;year=&#34;</span>,years,<span style="color:#e6db74">&#34;&amp;show_codes=true&amp;show_unit=true&amp;show_flags=true&amp;null_values=false&amp;output_type=csv&#34;</span>)
+</span></span><span style="display:flex;"><span>	download <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">GET</span>(url)
+</span></span><span style="display:flex;"><span>	translated_download <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">content</span>(download, <span style="color:#e6db74">&#34;text&#34;</span>)
+</span></span><span style="display:flex;"><span>	df<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">read_delim</span>(translated_download, <span style="color:#e6db74">&#34;,&#34;</span>, col_names <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">return</span>(df)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And that&rsquo;s pretty much it. But you need to know how to get the database names, area codes, element codes and item codes. You can get these from FAOSTAT <a href="https://www.fao.org/faostat/en/#definitions">here</a>, and also if you manually do a FAOSTAT query, they come up in the table on the web.</p>
 <p>Here&rsquo;s an example:</p>
-<p>It might also be handy to download all the items/elements/areas into a a dataframe or list, like I&rsquo;ve done in the example above for areas. The following code helps with that:</p>
-<p>Here&rsquo;s an example of the output for this example - all population for all areas:
-<img src="/static/FAOSTAT_screenshot.png" alt="alt text"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>database_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;OA&#34;</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fromJSON</span>(<span style="color:#e6db74">&#34;https://fenixservices.fao.org/faostat/api/v1/en/definitions/types/area?datasource=DB4&#34;</span>,flatten<span style="color:#f92672">=</span><span style="color:#66d9ef">TRUE</span>)
+</span></span><span style="display:flex;"><span>areas <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.list</span>(<span style="color:#a6e22e">as.data.frame</span>(data<span style="color:#f92672">$</span>data)<span style="color:#f92672">$</span><span style="color:#e6db74">&#39;Country Code&#39;</span>)
+</span></span><span style="display:flex;"><span>elements<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">511</span>) <span style="color:#75715e">#Total population - both sexes</span>
+</span></span><span style="display:flex;"><span>items<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3010</span>) <span style="color:#75715e">#Population</span>
+</span></span><span style="display:flex;"><span>years<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1990</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2021</span>)
+</span></span><span style="display:flex;"><span>FAO_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">get_fao</span>(database_name,areas,elements,items,years)
+</span></span></code></pre></div><p>It might also be handy to download all the items/elements/areas into a a dataframe or list, like I&rsquo;ve done in the example above for areas. The following code helps with that:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e">#FAO country codes:</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fromJSON</span>(<span style="color:#e6db74">&#34;https://fenixservices.fao.org/faostat/api/v1/en/definitions/types/area?datasource=DB4&#34;</span>,flatten<span style="color:#f92672">=</span><span style="color:#66d9ef">TRUE</span>)
+</span></span><span style="display:flex;"><span>FAO_country_codes <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.data.frame</span>(data<span style="color:#f92672">$</span>data)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#FAO element codes:</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fromJSON</span>(<span style="color:#e6db74">&#34;https://fenixservices.fao.org/faostat/api/v1/en/definitions/types/element?datasource=DB4&#34;</span>)
+</span></span><span style="display:flex;"><span>FAO_element_codes <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.data.frame</span>(data<span style="color:#f92672">$</span>data)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#FAO item codes:</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fromJSON</span>(<span style="color:#e6db74">&#34;https://fenixservices.fao.org/faostat/api/v1/en/definitions/types/item?datasource=DB4&#34;</span>)
+</span></span><span style="display:flex;"><span>FAO_item_codes <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.data.frame</span>(data<span style="color:#f92672">$</span>data)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#FAO database names:</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fromJSON</span>(<span style="color:#e6db74">&#34;https://fenixservices.fao.org/faostat/api/v1/en/definitions/types/item?datasource=DB4&#34;</span>)
+</span></span><span style="display:flex;"><span>FAO_item_codes <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.data.frame</span>(data<span style="color:#f92672">$</span>data)
+</span></span><span style="display:flex;"><span>database_names <span style="color:#f92672">&lt;-</span> FAO_item_codes<span style="color:#a6e22e">[c</span>(<span style="color:#e6db74">&#39;Domain Code&#39;</span>, <span style="color:#e6db74">&#39;Domain&#39;</span>)]
+</span></span><span style="display:flex;"><span>database_names <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">unique</span>(database_names)
+</span></span></code></pre></div><p>Here&rsquo;s an example of the output for this example - all population for all areas:
+<img src="/FAOSTAT_screenshot.png" alt="alt text"></p>
 <ul class="pa0">
   
 </ul>
