@@ -1,0 +1,4 @@
+baseURL = 'https://jamesfell.github.io/'
+languageCode = 'en-au'
+title = 'code'
+theme = 'ananke'
