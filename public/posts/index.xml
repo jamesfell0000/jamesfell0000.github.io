@@ -6,24 +6,23 @@
     <description>Recent content in Posts on code</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-au</language>
-    <lastBuildDate>Sun, 29 Oct 2023 20:50:58 +1100</lastBuildDate><atom:link href="https://jamesfell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Oct 2023 20:50:58 +1100</lastBuildDate><atom:link href="https://jamesfell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FAOSTAT API in R</title>
       <link>https://jamesfell.github.io/posts/faostat_api/</link>
-      <pubDate>Sun, 29 Oct 2023 20:50:58 +1100</pubDate>
+      <pubDate>Sun, 01 Oct 2023 20:50:58 +1100</pubDate>
       
       <guid>https://jamesfell.github.io/posts/faostat_api/</guid>
       <description>To help improve actual evidence bases, here&amp;rsquo;s a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn&amp;rsquo;t work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website.</description>
     </item>
     
     <item>
-      <title>My First Post</title>
-      <link>https://jamesfell.github.io/posts/my-first-post/</link>
-      <pubDate>Sun, 29 Oct 2023 20:39:58 +1100</pubDate>
+      <title>RStudio on ARM Chromebook</title>
+      <link>https://jamesfell.github.io/posts/rstudio_arm_chromebook/</link>
+      <pubDate>Sun, 13 Nov 2022 20:50:58 +1100</pubDate>
       
-      <guid>https://jamesfell.github.io/posts/my-first-post/</guid>
-      <description>Introduction This is bold text, and this is emphasized text.
-Visit the Hugo website!</description>
+      <guid>https://jamesfell.github.io/posts/rstudio_arm_chromebook/</guid>
+      <description>&lt;p&gt;After a long wait, the ARM64 build of RStudio is coming out. I&amp;rsquo;ve managed to install it from the (unstable) daily builds. Code is below, installed on an ARM64 Chromebook running Debian 11 virtual machine (you&amp;rsquo;ll need to have Linux installed first: &lt;a href=&#34;https://chromeos.dev/en/linux/setup&#34;&gt;chromeos.dev/en/linux/setup&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
     
   </channel>

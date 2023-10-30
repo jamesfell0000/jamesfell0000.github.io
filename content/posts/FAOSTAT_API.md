@@ -1,6 +1,6 @@
 +++
 title = 'FAOSTAT API in R'
-date = 2023-10-29T20:50:58+11:00
+date = 2023-10-01T20:50:58+11:00
 +++
 To help improve actual evidence bases, here's a generic tool that I made to access the FAOSTAT API in R. The APi is undocumented as far as I can see. However, there is an unnecessarily complicated R package, but that doesn't work. This particular example gets population stats for all counties/regions in the world from 1990 to 2021. But you could use it for anything available on the FAOSTAT website.
 
