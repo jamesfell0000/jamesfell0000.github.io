@@ -3,6 +3,7 @@ languageCode = 'en-au'
 title = 'code'
 theme = 'PaperMod'
 description = 'Useful tools for research, and helping build better evidence bases.'
+ShareButtons = [“linkedin”, “twitter”]
 
 [[socialIcons]]
 name = "researchgate"
