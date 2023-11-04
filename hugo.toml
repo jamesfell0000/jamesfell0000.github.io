@@ -2,3 +2,11 @@ baseURL = 'https://jamesfell.github.io/'
 languageCode = 'en-au'
 title = 'code'
 theme = 'PaperMod'
+
+[[socialIcons]]
+name = "researchgate"
+url = "https://www.researchgate.net/profile/James-Fell-5"
+
+[[socialIcons]]
+name = "twitter"
+url = "https://www.twitter.com/jamesfell0000"
