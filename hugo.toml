@@ -9,6 +9,7 @@ description = 'Useful tools for research, and helping build better evidence base
   color = 'light'                           # linen, wheat, gray, light
 
   # home page profile
+  avatar = 'https://upload.wikimedia.org/wikipedia/commons/0/04/Font_Awesome_5_solid_laptop-code.svg'
   name = 'code'
   bio = 'Sharing tools to support evidence base development'
 
