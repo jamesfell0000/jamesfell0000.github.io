@@ -5,11 +5,14 @@ theme = 'paper'
 description = 'Useful tools for research, and helping build better evidence bases.'
 
 [params]
+  # color style
+  color = 'light'                           # linen, wheat, gray, light
+
+  # header social icons
   github = 'jamesfell0000'
-  researchgate = 'James-Fell-5'
+  researchgate = 'James-Fell-5' #I'll commandeer the RSS link for researchgate
   twitter = 'jamesfell0000'
-  mastodon = 'https://www.threads.net/@jamesfell0000'
-  threads = 'https://www.threads.net/@jamesfell0000'
+  mastodon = 'https://www.threads.net/@jamesfell0000' #commandeered the mastodon link for threads
   rss = true
   
   #misc
