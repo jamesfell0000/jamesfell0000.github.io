@@ -8,12 +8,11 @@ description = 'Useful tools for research, and helping build better evidence base
   # color style
   color = 'light'                           # linen, wheat, gray, light
 
-  # header social icons
+  # header social icons. Customise the social list in baseof.html and add custom treatment in header.html
   github = 'jamesfell0000'
-  researchgate = 'James-Fell-5' #I'll commandeer the RSS link for researchgate
+  researchgate = 'https://www.researchgate.net/profile/James-Fell-5'
   twitter = 'jamesfell0000'
-  mastodon = 'https://www.threads.net/@jamesfell0000' #commandeered the mastodon link for threads
-  linkedin = 'https://www.researchgate.net/profile/James-Fell-5'
+  threads = 'https://www.threads.net/@jamesfell0000'
   rss = true
   
   
